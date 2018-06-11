@@ -1,0 +1,37 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'Bitter', serif;*/
+
+#logo {
+  border: 1px solid #BDBDBD;
+  height: 5em;
+}
+
+#logoLaboratoria {
+  width: 100%;
+}
+
+#user {
+  background-color: #FAFAFA;
+  border: 1px solid #BDBDBD;
+  height: 5em;
+}
+
+#userTM {
+  height: 3em;
+  margin: 1em;
+}
+
+#menuLeft {
+  background-color: #FFE521;
+  height: 3.75em;
+}
+
+#blanco {
+  height: 23.75em;
+}
+
+#logout {
+  background-color: #FAFAFA;
+  border: 1px solid #BDBDBD;
+  height: 2.5em;
+}
