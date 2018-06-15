@@ -4,62 +4,81 @@
 <head>
   <meta charset="utf-8">
   <title>Data Dashboard</title>
-  <link href="https://fonts.googleapis.com/css?family=Bitter|Open+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="grid.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <div class="wrapper">
-    <div class="row">
-
-      <!-- Menú izquierda -->
-      <div class="col-3">
-        <div id="logo">
-          <img id="logoLaboratoria" src="../img/logo-laboratoria.jpeg" alt="logo-laboratoria">
-        </div>
-        <div id="user">
-          <img id="userTM" src="../img/TM-usuario.png" alt="TM-usuario">
-          <p>TRAINING MANAGER</p>
-        </div>
-        <div>
-          <p id="menuLeft">MENÚ</p>
-        </div>
-        <div id="blanco"></div>
-        <div>
-          <p id="logout">CERRAR SESIÓN</p>
+  <div class="row">
+    <div class="col-3">
+      <div class="row logo">
+        <div class="col-md-6 offset-md-3">
+          <img src="../img/logo-laboratoria1.jpeg" width="100%" alt="logo-laboratoria"> 
         </div>
       </div>
-
-
-      <!-- opciones centrales -->
-      <div class="col-9">
-        <div>
-          <h1>TÍTULO</h1>
+      <div class="row logoTM">
+        <div class="col">
+          <img id="userTM" src="../img/TM-usuario.png" alt="TM-usuario">
+          <p id="textTM">TRAINING MANAGER</p>
         </div>
-
-        <div>
-          <p>PAÍS</p>
-          <button>CONTINUAR</button>
+      </div>
+      <div class="row menu">
+        <div class="col menuLeft">
+          <p class="menu">MENÚ</p>
         </div>
-        <div>
-          <p>PAÍS</p>
-          <button>CONTINUAR</button>
+      </div>
+      <div class="row logout">
+        <div class="col">
+          <p class="end">CERRAR SESIÓN</p>
         </div>
-        <div>
-          <p>PAÍS</p>
-          <button>CONTINUAR</button>
+      </div>
+    </div>
+    <div class="col-9">
+      <div class="row title">
+        <div class="col">
+          <h1 class="titleUno">TÍTULO</h1>
         </div>
-        <div>
-          <p>PAÍS</p>
-          <button>CONTINUAR</button>
+      </div>
+      <div class="row cuadro">
+        <div class="col-md-8 offset-md-2 pais">
+          <div id="pais1">
+            <p id="txt1">PAÍS</p>
+            <button id="btnUno">CONTINUAR</button>
+          </div>
+          <div id="pais1">
+            <p id="txt2">PAÍS</p>
+            <button id="btnDos">CONTINUAR</button>
+          </div>
+          <div id="pais1">
+            <p id="txt3">PAÍS</p>
+            <button id="btnTres">CONTINUAR</button>
+          </div>
+          <div id="pais1">
+            <p id="txt4">PAÍS</p>
+            <button id="btnCuatro">CONTINUAR</button>
+          </div>
+          <div id="pais1">
+            <p id="txt5">PAÍS</p>
+            <button id="btnCinco">CONTINUAR</button>
+          </div> 
         </div>
       </div>
     </div>
   </div>
+    <div class="container-fluid"></div>
 
-  <script src="main.js"></script>
+
+    <!-- Script  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+      crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
