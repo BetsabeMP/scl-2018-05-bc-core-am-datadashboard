@@ -1,37 +1,109 @@
 /* font-family: 'Open Sans', sans-serif;
 font-family: 'Bitter', serif;*/
 
-#logo {
-  border: 1px solid #BDBDBD;
-  height: 5em;
+.col-3 {
+  padding: 0rem;
 }
 
-#logoLaboratoria {
-  width: 100%;
+.col-9 {
+  padding: 0rem;
 }
 
-#user {
-  background-color: #FAFAFA;
-  border: 1px solid #BDBDBD;
-  height: 5em;
+.logo {
+  height: 4em;
+  width: 21.55rem;
+  line-height: 4rem;
+  margin: 0rem;
+}
+
+.logoTM {
+  height: 4rem;
+  width: 21.55rem;
+  padding: 0rem;
 }
 
 #userTM {
-  height: 3em;
-  margin: 1em;
+  height: 3rem;
+  margin-left: 1rem;
 }
 
-#menuLeft {
+#textTM {
+  font-family: 'Nunito', sans-serif;
+  text-indent: 1rem;
+  display: inline-block;
+}
+
+.menuLeft {
   background-color: #FFE521;
-  height: 3.75em;
+  height: 3rem;
+  font-family: 'Nunito', sans-serif;
+  text-indent: 4rem;
+  line-height: 3rem;
 }
 
-#blanco {
-  height: 23.75em;
+.menu {
+  height: 4rem;
+  margin: 0rem;
 }
 
-#logout {
+.logout {
+  height: 4rem;
+  margin: 0rem;
+}
+
+.end {
+  line-height: 3rem;
+  text-indent: 3rem;
+  font-family: 'Nunito', sans-serif;
   background-color: #FAFAFA;
   border: 1px solid #BDBDBD;
-  height: 2.5em;
+  height: 3em;
+  margin-top: 25rem;
+  margin-bottom: 0rem;
+}
+
+.title {
+  height: 4rem;
+}
+
+.titleUno {
+  font-size: 1.5rem;
+  line-height: 4rem;
+  text-indent: 2rem;
+  font-family: 'Nunito', sans-serif;
+  background-color: #FFE521;
+  height: 4rem;
+  color: #333333;
+}
+
+.pais {
+  font-family: 'Nunito', sans-serif;
+  margin-top: 3rem;
+}
+
+#pais1 {
+  background-color: #fafafa;
+  margin-bottom: 1rem;
+  border-style: outset;
+  border-radius: 0.2rem;
+}
+
+.cuadro {
+  margin: 0rem;
+}
+
+#btnUno, #btnDos, #btnTres, #btnCuatro, #btnCinco {
+  font-size: 0.8rem;
+  position: relative;
+  left: 34rem;
+  top: -1rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
+}
+
+#txt1, #txt2, #txt3, #txt4,  #txt5 {
+  text-indent: 1rem;
+  margin: 0.5rem;
+  line-height: 2rem;
+  border-top: 4rem;
 }
