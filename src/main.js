@@ -2,6 +2,8 @@
 window.onload = () => {
   window.callCountry()
     .then((dataCountry) => {
-      window.writeCountry(dataCountry);
+      const dataCountryTrue = dataCountry.filter(country => country.active !== false);
+      console.log(dataCountryTrue);
+      window.writeCountry(dataCountryTrue);
     });
 };
