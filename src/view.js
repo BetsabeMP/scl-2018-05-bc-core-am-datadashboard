@@ -5,7 +5,7 @@ window.writeCountry = (countries) => {
   for (let country of countries) {
     countryHTML = countryHTML + `<div id="pais1">
      <p id="txt1">${country.name}</p>
-     <button id="btnUno">CONTINUAR</button>
+     <button class="btnUno">CONTINUAR</button>
      </div>`;
   }
   let divCountry = document.getElementById('counter');
