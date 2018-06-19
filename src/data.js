@@ -2,13 +2,26 @@
 
 window.callCountry = () => {
   return fetch('https://laboratoria-la-staging.firebaseapp.com/campuses').then((response) => {
-    if (response.status === 200) {
+    if (response.ok) {
       return response.json();
     } else {
       throw new Error('La llamada a la API falló');
     }
   }).then((respuestaJson) => {
-    respuestaJson;
+    return respuestaJson;
+  }).catch((err) => {
+    console.error(err);
+  });
+};
+
+window.callCohorts = (campus) => {
+  return fetch(`https://laboratoria-la-staging.firebaseapp.com/cohorts?campus=${campus}`).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('La llamada a la API falló');
+    }
+  }).then((respuestaJson) => {
     return respuestaJson;
   }).catch((err) => {
     console.error(err);
