@@ -6,9 +6,13 @@ window.writeCountry = (countries) => {
      <p class="txt1">${country.name}</p>
      <button id="${country.id}">CONTINUAR</button>
      </div>`;
-  }
+  };
   let divCountry = document.getElementById('counter');
   divCountry.innerHTML = countryHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">PAÍS</p>
+</div>`;
 };
 
 // función que escribe cohort en pantalla
@@ -19,21 +23,28 @@ window.writeCohort = (cohorts) => {
      <p class="txt2">${cohort.id}</p>
      <button id="${cohort.id}">CONTINUAR</button>
      </div>`;
-  }
+  };
   let divCohort = document.getElementById('counter');
   divCohort.innerHTML = cohortHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">COHORT</p>
+</div>`;
 };
 
-//   console.log(countries);
-//   const countryArr = countries.map((country) => {
-//     return country.name;
-//   });
-//   let countryHTML = '';
-//   countryArr.forEach(element => {
-//     countryHTML = countryHTML + `<div id="pais1">
-// <p id="txt1">${element}</p>
-// <button id="btnUno">CONTINUAR</button>
-// </div>`;
-//   });
-//   let divCountry = document.getElementById('counter');
-//   divCountry.innerHTML = countryHTML;
+// función que escribe course en pantalla
+window.writeCourse = (courses) => {
+  let courseHTML = '';
+  for (let course of courses) {
+    courseHTML = courseHTML + `<div class="course">
+     <p class="txt2">${course.id}</p>
+     <button id="${course.id}">CONTINUAR</button>
+     </div>`;
+  };
+  let divCourse = document.getElementById('counter');
+  divCourse.innerHTML = courseHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">UNIDADES</p>
+</div>`;
+};

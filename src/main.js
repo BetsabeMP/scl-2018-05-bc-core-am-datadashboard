@@ -19,8 +19,20 @@ const cohort = (campus) => {
   btn.addEventListener('click', () => {
     window.callCohorts(campus)
       .then((dataCohorts) => {
-        console.log(dataCohorts);
         window.writeCohort(dataCohorts);
+        dataCohorts.map(cohort => course(cohort.id));
       });
   });
-}; 
+};
+
+// función para obtener course según el cohort y escribirlos
+const course = (cohort) => {
+  const btn = document.getElementById(cohort);
+  btn.addEventListener('click', () => {
+    window.callCourses(cohort)
+      .then((dataCourses) => {
+        console.log(dataCourses);
+        window.writeCourse(dataCourses);
+      });
+  });
+};
