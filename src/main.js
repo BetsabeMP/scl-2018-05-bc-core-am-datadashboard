@@ -21,6 +21,18 @@ const cohort = (campus) => {
       .then((dataCohorts) => {
         window.writeCohort(dataCohorts);
         dataCohorts.map(cohort => course(cohort.id));
+        dataCohorts.map(cohort => user(cohort.id + 'a'));
+      });
+  });
+};
+
+// función para obtener cohort según el cohort y escribirlos
+const user = (cohorta) => {
+  const btn = document.getElementById(cohorta);
+  btn.addEventListener('click', () => {
+    window.callUsers(cohorta)
+      .then((dataUsers) => {
+        window.writeUser(dataUsers);
       });
   });
 };
@@ -31,7 +43,6 @@ const course = (cohort) => {
   btn.addEventListener('click', () => {
     window.callCourses(cohort)
       .then((dataCourses) => {
-        console.log(dataCourses);
         window.writeCourse(dataCourses);
       });
   });

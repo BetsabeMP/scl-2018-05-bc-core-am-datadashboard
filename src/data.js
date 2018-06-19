@@ -43,6 +43,36 @@ window.callCourses = (cohort) => {
   });
 };
 
+// función para obtener usuarios según el cohort desde API
+window.callUsers = (cohorta) => {
+  return fetch(`https://laboratoria-la-staging.firebaseapp.com/cohorts/${cohorta.slice(0, -1)}/users?role=student&basicProfile=`).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('La llamada a la API falló');
+    }
+  }).then((respuestaJson) => {
+    return respuestaJson;
+  }).catch((err) => {
+    console.error(err);
+  });
+};
+
+// función para obtener unidades de los cursos desde API
+window.callCourseCohortProgress = (cohortid, courseid) => {
+  return fetch(`https://laboratoria-la-staging.firebaseapp.com/progress?cohortid=${cohortid}&courseid=${courseid}`).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('La llamada a la API falló');
+    }
+  }).then((respuestaJson) => {
+    return respuestaJson;
+  }).catch((err) => {
+    console.error(err); I
+  });
+};
+
 window.computeUsersStats = (users, progress, courses) => {
 
 };

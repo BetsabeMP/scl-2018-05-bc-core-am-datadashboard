@@ -12,7 +12,7 @@ window.writeCountry = (countries) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML = `<div class="col menuLeft">
   <p class="menu">PAÍS</p>
-</div>`;
+  </div>`;
 };
 
 // función que escribe cohort en pantalla
@@ -21,7 +21,8 @@ window.writeCohort = (cohorts) => {
   for (let cohort of cohorts) {
     cohortHTML = cohortHTML + `<div class="cohort">
      <p class="txt2">${cohort.id}</p>
-     <button id="${cohort.id}">CONTINUAR</button>
+     <button id="${cohort.id}">UNIDADES</button>
+     <button id="${cohort.id}a">ALUMNAS</button>
      </div>`;
   };
   let divCohort = document.getElementById('counter');
@@ -29,7 +30,23 @@ window.writeCohort = (cohorts) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML = `<div class="col menuLeft">
   <p class="menu">COHORT</p>
-</div>`;
+  </div>`;
+};
+
+// función que escribe alumnas en pantalla
+window.writeUser = (users) => {
+  let userHTML = '';
+  for (let user of users) {
+    userHTML = userHTML + `<div class="user">
+     <p class="txt2">${user.name}</p>
+     </div>`;
+  };
+  let divUser = document.getElementById('counter');
+  divUser.innerHTML = userHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">COHORT</p>
+  </div>`;
 };
 
 // función que escribe course en pantalla
@@ -46,5 +63,5 @@ window.writeCourse = (courses) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML = `<div class="col menuLeft">
   <p class="menu">UNIDADES</p>
-</div>`;
+  </div>`;
 };
