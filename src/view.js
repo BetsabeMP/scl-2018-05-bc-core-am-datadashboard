@@ -1,27 +1,56 @@
-// funcion que escribe los paises en pantalla
-
+// función que escribe los paises en pantalla
 window.writeCountry = (countries) => {
   let countryHTML = '';
   for (let country of countries) {
+<<<<<<< HEAD
     countryHTML = countryHTML + `<div id="pais1">
      <p id="txt1">${country.name}</p>
      <button class="btnUno">CONTINUAR</button>
+=======
+    countryHTML = countryHTML + `<div class="pais">
+     <p class="txt1">${country.name}</p>
+     <button id="${country.id}">CONTINUAR</button>
+>>>>>>> upstream/master
      </div>`;
-  }
+  };
   let divCountry = document.getElementById('counter');
   divCountry.innerHTML = countryHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">PAÍS</p>
+</div>`;
 };
 
-//   console.log(countries);
-//   const countryArr = countries.map((country) => {
-//     return country.name;
-//   });
-//   let countryHTML = '';
-//   countryArr.forEach(element => {
-//     countryHTML = countryHTML + `<div id="pais1">
-// <p id="txt1">${element}</p>
-// <button id="btnUno">CONTINUAR</button>
-// </div>`;
-//   });
-//   let divCountry = document.getElementById('counter');
-//   divCountry.innerHTML = countryHTML;
+// función que escribe cohort en pantalla
+window.writeCohort = (cohorts) => {
+  let cohortHTML = '';
+  for (let cohort of cohorts) {
+    cohortHTML = cohortHTML + `<div class="cohort">
+     <p class="txt2">${cohort.id}</p>
+     <button id="${cohort.id}">CONTINUAR</button>
+     </div>`;
+  };
+  let divCohort = document.getElementById('counter');
+  divCohort.innerHTML = cohortHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">COHORT</p>
+</div>`;
+};
+
+// función que escribe course en pantalla
+window.writeCourse = (courses) => {
+  let courseHTML = '';
+  for (let course of courses) {
+    courseHTML = courseHTML + `<div class="course">
+     <p class="txt2">${course.id}</p>
+     <button id="${course.id}">CONTINUAR</button>
+     </div>`;
+  };
+  let divCourse = document.getElementById('counter');
+  divCourse.innerHTML = courseHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML = `<div class="col menuLeft">
+  <p class="menu">UNIDADES</p>
+</div>`;
+};

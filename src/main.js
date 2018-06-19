@@ -6,10 +6,5 @@ window.onload = () => {
       console.log(dataCountryTrue);
       window.writeCountry(dataCountryTrue);
     });
-
-  const btn = document.getElementsByClassName('btnUno');
-  btn.addEventListener('click', () => {
-    console.log('Hola');
-  });
 };
 
