@@ -26,7 +26,7 @@ const cohort = (campus) => {
   });
 };
 
-// función para obtener cohort según el cohort y escribirlos
+// función para obtener usuarios según el cohort y escribirlos
 const user = (cohorta) => {
   const btn = document.getElementById(cohorta);
   btn.addEventListener('click', () => {

@@ -46,13 +46,14 @@ window.writeUser = (users) => {
   for (let user of us) {
     userHTML = userHTML +
       `<div class="user">
+      <button id="${user.replace(' ', '').toLowerCase()}">IR</button>
       <p class="txt2">${user}</p>
-      </div>`;
+      </div > `;
   };
   let divUser = document.getElementById('counter');
   divUser.innerHTML =
     `<div>
-    <input type="text" placeholder="Nombre">
+    <input id="inputName" type="text" placeholder="Nombre">
     <button>BUSCAR</button>
     </div>
     <br>
@@ -78,6 +79,6 @@ window.writeCourse = (courses) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
-    <p class="menu">COHORT</p>
-    </div>`;
+        <p class="menu">COHORT</p>
+      </div>`;
 };
