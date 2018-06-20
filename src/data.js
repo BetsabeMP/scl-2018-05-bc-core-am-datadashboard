@@ -84,7 +84,7 @@ window.callCourseCohortProgress = (cohortid, courseid) => {
   }).then((respuestaJson) => {
     return respuestaJson;
   }).catch((err) => {
-    console.error(err); I
+    console.error(err); 
   });
 };
 
