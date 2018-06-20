@@ -10,7 +10,7 @@ window.writeCountry = (countries) => {
   let divCountry = document.getElementById('counter');
   divCountry.innerHTML = countryHTML;
   const divMenu = document.getElementById('menu');
-  divMenu.innerHTML = `<div class="col menuLeft">
+  divMenu.innerHTML = `<div class="col menuGeneral">
   <p class="menu">PAÍS</p>
 </div>`;
 };
@@ -27,7 +27,7 @@ window.writeCohort = (cohorts) => {
   let divCohort = document.getElementById('counter');
   divCohort.innerHTML = cohortHTML;
   const divMenu = document.getElementById('menu');
-  divMenu.innerHTML = `<div class="col menuLeft">
+  divMenu.innerHTML = `<div class="col menuGeneral">
   <p class="menu">COHORT</p>
 </div>`;
 };
@@ -44,7 +44,7 @@ window.writeCourse = (courses) => {
   let divCourse = document.getElementById('counter');
   divCourse.innerHTML = courseHTML;
   const divMenu = document.getElementById('menu');
-  divMenu.innerHTML = `<div class="col menuLeft">
+  divMenu.innerHTML = `<div class="col menuGeneral">
   <p class="menu">UNIDADES</p>
 </div>`;
 };
