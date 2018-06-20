@@ -21,8 +21,6 @@ const cohort = (campus) => {
       .then((dataCohorts) => {
         window.writeCohort(dataCohorts);
         dataCohorts.map(cohort => course(cohort.id));
-<<<<<<< HEAD
-=======
         dataCohorts.map(cohort => user(cohort.id + 'a'));
       });
   });
@@ -48,7 +46,6 @@ const userInput = (users) => {
     window.callUserInput(users)
       .then((dataUserInput) => {
         console.log(dataUserInput);
->>>>>>> upstream/master
       });
   });
 };

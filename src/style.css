@@ -77,8 +77,45 @@
 
 .square {
   background-color: #fafafa;
-  border: groove;
+  border-top: groove;
+  border-right: groove;
   height: 36.6rem;
+}
+
+/*segunda sección*/
+.cohort {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  background-color: white;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 0.2rem;
+  height: 7rem;
+  width: 37rem;
+}
+
+.txt2 {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-indent: 1rem;
+  line-height: 3rem;
+}
+
+#cdmx-2017-10-bc-core-pm, #cdmx-2017-10-bc-core-pma, #cdmx-2017-12-ec-js-deepdive, #cdmx-2017-12-ec-js-deepdivea, #cdmx-2018-01-ec-js-edcparadigmascdmx, #cdmx-2018-01-ec-js-edcparadigmascdmxa, #cdmx-2018-02-bc-js-front-end-developer, #cdmx-2018-02-bc-js-front-end-developera, #cdmx-2018-02-bc-ux-ux-designer, #cdmx-2018-02-bc-ux-ux-designera, #cdmx-2018-03-pre-core-pw, #cdmx-2018-03-pre-core-pwa {
+  float: right;
+  margin-top: 4rem;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
+}
+
+#cdmx-2018-03-ec-js-educacion-continua-javascript-angular, #cdmx-2018-03-ec-js-educacion-continua-javascript-angulara {
+  float: right;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
 }
 
 /*
