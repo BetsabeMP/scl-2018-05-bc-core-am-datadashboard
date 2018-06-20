@@ -5,7 +5,7 @@ window.writeCountry = (countries) => {
     countryHTML = countryHTML +
       `<div class="pais">
       <p class="txt1">${country.name}</p>
-      <button id="${country.id}">CONTINUAR</button>
+      <button id="${country.id}" class="botonPaises">CONTINUAR</button>
       </div>`;
   };
   let divCountry = document.getElementById('counter');
@@ -49,14 +49,14 @@ window.writeUser = (users) => {
   for (let user of users) {
     userHTML = userHTML +
       `<div class="user">
-      <button id="${user.id}">IR</button>
-      <p class="txt2">${user.name}</p>
-      <p class="txt2">(id=${user.id})</p>
+      <button id="${user.id}" class="botonVerAlumnas">VER</button>
+      <p class="txt3">${user.name}</p>
+      <p class="txta">id=${user.id}</p>
       </div > `;
   };
   let divUser = document.getElementById('counter');
   divUser.innerHTML =
-    `<div>
+    `<div class="inputAlumnas">
     <input id="inputName" type="text" placeholder="Nombre">
     <button id="inputButton">BUSCAR</button>
     </div>

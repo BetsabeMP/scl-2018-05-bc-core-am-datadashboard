@@ -1,5 +1,10 @@
-// función al cargar página carga funciones de datos y escritura
+
 window.onload = () => {
+  country();
+};
+
+// función para obtener paises y escribirlos
+const country = () => {
   window.callCountry()
     .then((dataCountry) => {
       const dataCountryTrue = dataCountry.filter(country => country.active !== false);
@@ -50,6 +55,7 @@ const course = (cohort) => {
   btn.addEventListener('click', () => {
     window.callCourses(cohort)
       .then((dataCourses) => {
+        console.log(dataCourses);
         window.writeCourse(dataCourses);
       });
   });
