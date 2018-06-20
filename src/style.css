@@ -1,3 +1,4 @@
+/*Inicio*/
 .logo {
   height: 3.7rem;
   line-height: 3rem;
@@ -15,6 +16,7 @@
 
 .titleUno {
   font-size: 1.5rem;
+  font-weight: bold;
   height: 3rem;
   line-height: 3.5rem;
   font-family: 'Open Sans', sans-serif;
@@ -27,23 +29,25 @@
   background-color: white;
   margin-bottom: 1rem;
   margin-top: 2rem;
-  border-style: outset;
+  box-shadow: 2px 2px 5px #999;
   border-radius: 0.2rem;
   height: 4rem;
 }
 
 .txt1 {
   display: inline-block;
+  font-weight: bold;
   text-indent: 1rem;
   line-height: 2rem;
 }
 
-#cdmx, #gdl, #lim, #scl, #spl {
+.botonPaises {
   float: right;
   margin-top: 1.5rem;
   margin-right: 0.5rem;
   border-radius: 0.2rem;
   background-color: #FFE521;
+  cursor: pointer;
 }
 
 .logoTM {
@@ -82,7 +86,7 @@
   height: 36.6rem;
 }
 
-/*segunda sección*/
+/*Sección cohort méxico*/
 .cohort {
   font-family: 'Open Sans', sans-serif;
   color: #333333;
@@ -109,6 +113,7 @@
   margin-right: 0.5rem;
   border-radius: 0.2rem;
   background-color: #FFE521;
+  cursor: pointer;
 }
 
 #cdmx-2018-03-ec-js-educacion-continua-javascript-angular, #cdmx-2018-03-ec-js-educacion-continua-javascript-angulara {
@@ -116,10 +121,66 @@
   margin-right: 0.5rem;
   border-radius: 0.2rem;
   background-color: #FFE521;
+  cursor: pointer;
 }
 
-/*
+/*Sección alumnas cdmx-2017-10-bc-core-pm*/
+.user {
+  width: 37rem;
+}
 
+.inputAlumnas {
+  margin-top: 1rem;
+}
+
+.txt3 {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-indent: 1rem;
+  line-height: 3rem;
+}
+
+.txta {
+  display: inline-block;
+  font-size: 1rem;
+  text-indent: 1rem;
+  line-height: 3rem;
+  color: #ff009e69;
+}
+
+.botonVerAlumnas, #inputButton {
+  border-radius: 0.2rem;
+  box-shadow: 2px 2px 5px #999;
+  background-color: #FFE521;
+  cursor: pointer;
+}
+
+#gdl-2018-03-bc-js-front-end-developer, #gdl-2018-03-bc-js-front-end-developera {
+  float: right;
+  margin-top: 4rem;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
+  cursor: pointer;
+}
+
+/*Cohort lima*/
+#lim-2017-09-bc-core-am, #lim-2017-09-bc-core-ama, #lim-2017-09-bc-core-pm, #lim-2017-09-bc-core-pma, #lim-2017-09-ec-js-functional, #lim-2017-09-ec-js-functionala, #lim-2017-10-ec-js-paradigms, #lim-2017-10-ec-js-paradigmsa, #lim-2017-10-ec-js-react, #lim-2017-10-ec-js-reacta, #lim-2017-11-ec-js-angular-fundamentals, #lim-2017-11-ec-js-angular-fundamentalsa, #lim-2017-11-ec-js-redux, #lim-2017-11-ec-js-reduxa, #lim-2018-01-bc-js-front-end-developer, #lim-2018-01-bc-js-front-end-developera, #lim-2018-01-bc-ux-ux-designer, #lim-2018-01-bc-ux-ux-designera, #lim-2018-01-ec-js-chatbot, #lim-2018-01-ec-js-chatbota, #lim-2018-01-ec-js-funcionaljs, #lim-2018-01-ec-js-funcionaljsa, #lim-2018-03-jp-core-talento-lima, #lim-2018-03-jp-core-talento-limaa, #lim-2018-03-pre-core-pw, #lim-2018-03-pre-core-pwa, #lim-2018-06-bc-ux-test-ux, #lim-2018-06-bc-ux-test-uxa, #lim-2018-06-jp-core-new-ui
+, #lim-2018-06-jp-core-new-uia, #lim-2018-06-pre-js-prework-test, #lim-2018-06-pre-js-prework-testa, #lim-2018-06-pre-js-test-arun, #lim-2018-06-pre-js-test-aruna{
+  float: right;
+  margin-top: 4rem;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
+  cursor: pointer;
+}
+
+
+
+
+
+/*
 bitter regular para los titulos
 Open Sans Regular para los textos
 font-family: 'Bitter', serif;
