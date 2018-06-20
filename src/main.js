@@ -32,7 +32,20 @@ const user = (cohorta) => {
   btn.addEventListener('click', () => {
     window.callUsers(cohorta)
       .then((dataUsers) => {
-        window.writeUser(dataUsers);
+        const sotedDataUser = dataUsers.sort();
+        window.writeUser(sotedDataUser);
+        sotedDataUser.map(users => userInput(users.id));
+      });
+  });
+};
+
+// función para buscar nombre desde input
+const userInput = (users) => {
+  const inpt = document.getElementById('inputButton');
+  inpt.addEventListener('click', () => {
+    window.callUserInput(users)
+      .then((dataUserInput) => {
+        console.log(dataUserInput);
       });
   });
 };

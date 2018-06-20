@@ -39,22 +39,24 @@ window.writeCohort = (cohorts) => {
 
 // función que escribe input y alumnas en pantalla
 window.writeUser = (users) => {
-  const nameUser = users.map(element => element.name);
-  const nameUpper = (nameUser.map(element => element.toUpperCase())).sort();
-  const us = nameUpper.values();
+  // const userId = users.map(element => element.id);
+  // console.log(userId);
+  // // const nameUser = users.map(element => element.name);
+  // // const nameUpper = (nameUser.map(element => element.toUpperCase())).sort();
+  // // const us = nameUpper.values();
   let userHTML = '';
-  for (let user of us) {
+  for (let user of users) {
     userHTML = userHTML +
       `<div class="user">
-      <button id="${user.replace(' ', '').toLowerCase()}">IR</button>
-      <p class="txt2">${user}</p>
+      <button id="${user.id}">IR</button>
+      <p class="txt2">${user.name} (id=${user.id})</p>
       </div > `;
   };
   let divUser = document.getElementById('counter');
   divUser.innerHTML =
     `<div>
     <input id="inputName" type="text" placeholder="Nombre">
-    <button>BUSCAR</button>
+    <button id="inputButton">BUSCAR</button>
     </div>
     <br>
     ${userHTML}`;
