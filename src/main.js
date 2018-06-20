@@ -1,10 +1,15 @@
-// función al cargar página carga funciones de datos y escritura
+
 window.onload = () => {
+  country();
+};
+
+// función para obtener paises y escribirlos
+const country = () => {
   window.callCountry()
     .then((dataCountry) => {
       const dataCountryTrue = dataCountry.filter(country => country.active !== false);
-      console.log(dataCountryTrue);
       window.writeCountry(dataCountryTrue);
+      dataCountryTrue.map(country => cohort(country.id));
     });
 };
 
@@ -16,18 +21,6 @@ const cohort = (campus) => {
       .then((dataCohorts) => {
         window.writeCohort(dataCohorts);
         dataCohorts.map(cohort => course(cohort.id));
-        dataCohorts.map(cohort => user(cohort.id + 'a'));
-      });
-  });
-};
-
-// función para obtener cohort según el cohort y escribirlos
-const user = (cohorta) => {
-  const btn = document.getElementById(cohorta);
-  btn.addEventListener('click', () => {
-    window.callUsers(cohorta)
-      .then((dataUsers) => {
-        window.writeUser(dataUsers);
       });
   });
 };
@@ -38,6 +31,7 @@ const course = (cohort) => {
   btn.addEventListener('click', () => {
     window.callCourses(cohort)
       .then((dataCourses) => {
+        console.log(dataCourses);
         window.writeCourse(dataCourses);
       });
   });
