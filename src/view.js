@@ -15,10 +15,15 @@ window.writeCountry = (countries) => {
     `<div class="col menuLeft">
     <p class="menu">MENÚ</p>
     </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">DATA DASHBOARD</h1>';
 };
 
 // función que escribe cohort en pantalla
 window.writeCohort = (cohorts) => {
+  console.log('parametro', cohorts);
+
   let cohortHTML = '';
   for (let cohort of cohorts) {
     cohortHTML = cohortHTML +
@@ -35,21 +40,20 @@ window.writeCohort = (cohorts) => {
     `<div class="col menuLeft">
     <p class="menu">PAÍS</p>
     </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">COHORT</h1>';
 };
 
 // función que escribe input y alumnas en pantalla
 window.writeUser = (users) => {
-  // const userId = users.map(element => element.id);
-  // console.log(userId);
-  // // const nameUser = users.map(element => element.name);
-  // // const nameUpper = (nameUser.map(element => element.toUpperCase())).sort();
-  // // const us = nameUpper.values();
   let userHTML = '';
   for (let user of users) {
     userHTML = userHTML +
       `<div class="user">
       <button id="${user.id}">IR</button>
-      <p class="txt2">${user.name} (id=${user.id})</p>
+      <p class="txt2">${user.name}</p>
+      <p class="txt2">(id=${user.id})</p>
       </div > `;
   };
   let divUser = document.getElementById('counter');
@@ -65,6 +69,9 @@ window.writeUser = (users) => {
     `<div class="col menuLeft">
     <p class="menu">COHORT</p>
     </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">ALUMNAS</h1>';
 };
 
 // función que escribe course en pantalla
@@ -83,4 +90,8 @@ window.writeCourse = (courses) => {
     `<div class="col menuLeft">
         <p class="menu">COHORT</p>
       </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">UNIDADES</h1>';
 };
+

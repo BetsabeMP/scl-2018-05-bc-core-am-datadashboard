@@ -3,8 +3,8 @@ window.onload = () => {
   window.callCountry()
     .then((dataCountry) => {
       const dataCountryTrue = dataCountry.filter(country => country.active !== false);
-      console.log(dataCountryTrue);
       window.writeCountry(dataCountryTrue);
+      dataCountryTrue.map(country => cohort(country.id));
     });
 };
 
