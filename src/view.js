@@ -5,7 +5,7 @@ window.writeCountry = (countries) => {
     countryHTML = countryHTML +
       `<div class="pais">
       <p class="txt1">${country.name}</p>
-      <button id="${country.id}">CONTINUAR</button>
+      <button id="${country.id}" class="botonPaises">CONTINUAR</button>
       </div>`;
   };
   let divCountry = document.getElementById('counter');
@@ -15,10 +15,15 @@ window.writeCountry = (countries) => {
     `<div class="col menuLeft">
     <p class="menu">MENÚ</p>
     </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">DATA DASHBOARD</h1>';
 };
 
 // función que escribe cohort en pantalla
 window.writeCohort = (cohorts) => {
+  console.log('parametro', cohorts);
+
   let cohortHTML = '';
   for (let cohort of cohorts) {
     cohortHTML = cohortHTML +
@@ -35,25 +40,27 @@ window.writeCohort = (cohorts) => {
     `<div class="col menuLeft">
     <p class="menu">PAÍS</p>
     </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">COHORT</h1>';
 };
 
 // función que escribe input y alumnas en pantalla
 window.writeUser = (users) => {
-  const nameUser = users.map(element => element.name);
-  const nameUpper = (nameUser.map(element => element.toUpperCase())).sort();
-  const us = nameUpper.values();
   let userHTML = '';
-  for (let user of us) {
+  for (let user of users) {
     userHTML = userHTML +
       `<div class="user">
-      <p class="txt2">${user}</p>
-      </div>`;
+      <button id="${user.id}" class="botonVerAlumnas">VER</button>
+      <p class="txt3">${user.name}</p>
+      <p class="txta">id=${user.id}</p>
+      </div > `;
   };
   let divUser = document.getElementById('counter');
   divUser.innerHTML =
-    `<div>
-    <input type="text" placeholder="Nombre">
-    <button>BUSCAR</button>
+    `<div class="inputAlumnas">
+    <input id="inputName" type="text" placeholder="Nombre">
+    <button id="inputButton">BUSCAR</button>
     </div>
     <br>
     ${userHTML}`;
@@ -62,6 +69,9 @@ window.writeUser = (users) => {
     `<div class="col menuLeft">
     <p class="menu">COHORT</p>
     </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">ALUMNAS</h1>';
 };
 
 // función que escribe course en pantalla
@@ -78,6 +88,10 @@ window.writeCourse = (courses) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
-    <p class="menu">COHORT</p>
-    </div>`;
+        <p class="menu">COHORT</p>
+      </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">UNIDADES</h1>';
 };
+
