@@ -84,9 +84,24 @@ window.callCourseCohortProgress = (cohortid, courseid) => {
   }).then((respuestaJson) => {
     return respuestaJson;
   }).catch((err) => {
-    console.error(err); 
+    console.error(err);
   });
 };
+
+// función para obtener progreso de users de un cohort desde API
+window.callUsersCohort = (cohortId) => {
+  return fetch(`https://laboratoria-la-staging.firebaseapp.com/cohorts/${cohortId}/progress`).then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error('La llamada a la API falló');
+    }
+  }).then((respuestaJson) => {
+    return respuestaJson;
+  }).catch((err) => {
+    console.error(err);
+  });
+}
 
 window.computeUsersStats = (users, progress, courses) => {
 

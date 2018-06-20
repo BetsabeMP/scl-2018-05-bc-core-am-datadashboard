@@ -27,9 +27,9 @@ const user = (cohorta) => {
   btn.addEventListener('click', () => {
     window.callUsers(cohorta)
       .then((dataUsers) => {
-        const sotedDataUser = dataUsers.sort();
-        window.writeUser(sotedDataUser);
-        sotedDataUser.map(users => userInput(users.id));
+        window.writeUser(dataUsers);
+        dataUsers.map(users => userInput(users.id));
+        dataUsers.map(users => UserCohort(users.id, users.signupCohort));
       });
   });
 };
@@ -40,7 +40,6 @@ const userInput = (users) => {
   inpt.addEventListener('click', () => {
     window.callUserInput(users)
       .then((dataUserInput) => {
-        console.log(dataUserInput);
       });
   });
 };
@@ -52,6 +51,23 @@ const course = (cohort) => {
     window.callCourses(cohort)
       .then((dataCourses) => {
         window.writeCourse(dataCourses);
+      });
+  });
+};
+
+// función para obtener progreso de una alumna de un cohort 
+const UserCohort = (user, cohortId) => {
+  const btn = document.getElementById(user);
+  btn.addEventListener('click', () => {
+    window.callUsersCohort(cohortId)
+      .then((dataUserCohort) => {
+        const userCohortArr = Object.entries(dataUserCohort);
+        for (let i = 0; i < userCohortArr.length; i++) {
+          if (userCohortArr[i][0] === user) {
+            let found = userCohortArr[i];
+            console.log(found);
+          };
+        };
       });
   });
 };

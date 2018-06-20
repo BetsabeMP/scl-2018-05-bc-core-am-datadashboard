@@ -22,8 +22,6 @@ window.writeCountry = (countries) => {
 
 // función que escribe cohort en pantalla
 window.writeCohort = (cohorts) => {
-  console.log('parametro', cohorts);
-
   let cohortHTML = '';
   for (let cohort of cohorts) {
     cohortHTML = cohortHTML +
