@@ -65,35 +65,87 @@ const getPercentCourse = (user) => {
   return (percentList / courses.length);
 };
 
+// función para obtener datos de cada tema y unidad
 const getUnits = (units) => {
   console.log('units', units);
+  let summationCompleted = 0;
+  let summationDuration = 0;
+  let summationCompletedRead = 0;
+  let summationDurationRead = 0;
+  let summationCompletedPractice = 0;
+  let summationDurationPractice = 0;
+  let summationCompletedQuiz = 0;
+  let summationDurationQuiz = 0;
 
+  // unitsKey obtengo subindice de unidades (0,1,2,...)
   const unitsKey = Object.keys(units);
 
+  // recorro arreglo units segun sub indice y obtengo parts y percent
   const unitDetail = unitsKey.map(unit => {
     const partObj = units[unit].parts;
-    // console.log('units[unit].parts', units[unit].parts);
     const percentObj = units[unit].percent;
-    // llamar a algo q recorra las sub partes
+
+    // partKey obtengo subindice de unidades (0,1,2,...)
     const partKey = Object.keys(units[unit].parts);
-    // console.log('partKey', partKey);
+
+    // recorro arreglo partObj segun sub indice y obtengo duraciones y type
     const partDetail = partKey.map(part => {
       const completedUnit = partObj[part].completed;
       const durationUnit = partObj[part].duration;
       const typeUnit = partObj[part].type;
       console.log('percentObj', percentObj, 'completedUnit', completedUnit, 'durationUnit', durationUnit, 'typeUnit', typeUnit);
 
+      // sumo completed y duration 
+      summationCompleted = summationCompleted + completedUnit;
+      summationDuration = summationDuration + durationUnit;
+      console.log('summationCompleted', summationCompleted, 'summationDuration', summationDuration);
+
+      // sumo con read
+      if (typeUnit === 'read') {
+        completedUnitRead = completedUnit;
+        durationUnitRead = durationUnit;
+      } else {
+        completedUnitRead = 0;
+        durationUnitRead = 0;
+      };
+      summationCompletedRead = summationCompletedRead + completedUnitRead;
+      summationDurationRead = summationDurationRead + durationUnitRead;
+      console.log('summationCompletedRead', summationCompletedRead, 'summationDurationRead', summationDurationRead);
+
+      // sumo con practice
+      if (typeUnit === 'practice') {
+        completedUnitPractice = completedUnit;
+        durationUnitPractice = durationUnit;
+      } else {
+        completedUnitPractice = 0;
+        durationUnitPractice = 0;
+      };
+      summationCompletedPractice = summationCompletedPractice + completedUnitPractice;
+      summationDurationPractice = summationDurationPractice + durationUnitPractice;
+      console.log('summationCompletedPractice', summationCompletedPractice, 'summationDurationPractice', summationDurationPractice);
+
+      // sumo con quiz
+      if (typeUnit === 'quiz') {
+        completedUnitQuiz = completedUnit;
+        durationUnitQuiz = durationUnit;
+      } else {
+        completedUnitQuiz = 0;
+        durationUnitQuiz = 0;
+      };
+      summationCompletedQuiz = summationCompletedQuiz + completedUnitQuiz;
+      summationDurationQuiz = summationDurationQuiz + durationUnitQuiz;
+      console.log('summationCompletedQuiz', summationCompletedQuiz, 'summationDurationQuiz', summationDurationQuiz);
     });
     return partDetail;
   });
   return unitDetail;
 };
 
+
+// función para obtener unidades y courses  desde la info de alumna
 const getCourseInfo = (user) => {
   const courses = Object.keys(user);
-
   let coursesInfo = [];
-
   for (let course of courses) {
     coursesInfo[course] = getUnits(user[course].units);
   };
