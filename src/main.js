@@ -66,17 +66,23 @@ const getPercentCourse = (user) => {
 };
 
 const getUnits = (units) => {
+  console.log('units', units);
+
   const unitsKey = Object.keys(units);
 
   const unitDetail = unitsKey.map(unit => {
     const partObj = units[unit].parts;
     // console.log('units[unit].parts', units[unit].parts);
-    // console.log('partObj', partObj);
+    const percentObj = units[unit].percent;
     // llamar a algo q recorra las sub partes
     const partKey = Object.keys(units[unit].parts);
     // console.log('partKey', partKey);
     const partDetail = partKey.map(part => {
-      console.log(partObj[part].type);
+      const completedUnit = partObj[part].completed;
+      const durationUnit = partObj[part].duration;
+      const typeUnit = partObj[part].type;
+      console.log('percentObj', percentObj, 'completedUnit', completedUnit, 'durationUnit', durationUnit, 'typeUnit', typeUnit);
+
     });
     return partDetail;
   });
