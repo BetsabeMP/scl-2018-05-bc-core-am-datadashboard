@@ -126,7 +126,7 @@
 
 /*Sección alumnas cdmx-2017-10-bc-core-pm*/
 .user {
-  width: 37rem;
+  width: 41rem;
 }
 
 .inputAlumnas {
@@ -176,6 +176,37 @@
   cursor: pointer;
 }
 
+/*Unidad cdmx-2017-10-bc-core-pm*/
+.course {
+  font-family: 'Open Sans', sans-serif;
+  color: #333333;
+  background-color: white;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  box-shadow: 2px 2px 5px #999;
+  border-radius: 0.2rem;
+  height: 4rem;
+}
+
+/*Cohort Santiago*/
+#scl-2017-09-bc-core-am, #scl-2017-09-bc-core-ama, #scl-2017-09-bc-core-pm, #scl-2017-09-bc-core-pma, #scl-2017-09-ec-js-functional, #scl-2017-09-ec-js-functionala, #scl-2017-11-ec-js-paradigms, #scl-2017-11-ec-js-paradigmsa, #scl-2017-11-ec-js-react, #scl-2017-11-ec-js-reacta, #scl-2018-01-bc-js-front-end-developer, #scl-2018-01-bc-js-front-end-developera, #scl-2018-01-bc-ux-ux-designer, #scl-2018-01-bc-ux-ux-designera, #scl-2018-01-ec-js-angular, #scl-2018-01-ec-js-angulara, #scl-2018-01-ec-js-chatbot, #scl-2018-01-ec-js-chatbota, #scl-2018-03-ec-ux-research, #scl-2018-03-ec-ux-researcha, #scl-2018-03-pre-core-pw, #scl-2018-03-pre-core-pwa {
+  float: right;
+  margin-top: 4rem;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
+  cursor: pointer;
+}
+
+/*Cohort Sao Paulo*/
+#spl-2018-03-pre-core-pw, #spl-2018-03-pre-core-pwa, #spl-2018-05-bc-js-front-end-developer, #spl-2018-05-bc-js-front-end-developera {
+  float: right;
+  margin-top: 4rem;
+  margin-right: 0.5rem;
+  border-radius: 0.2rem;
+  background-color: #FFE521;
+  cursor: pointer;
+}
 
 
 
