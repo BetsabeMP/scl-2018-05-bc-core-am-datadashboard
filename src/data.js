@@ -1,13 +1,18 @@
 // función para obtener paises desde API
 window.callCountry = () => {
+  // resultado de la función, lo que haga el fetch
   return fetch('https://laboratoria-la-staging.firebaseapp.com/campuses').then((response) => {
+    // si existe respuesta, que me la de en formato json
     if (response.ok) {
       return response.json();
+      // si no existe respuesta arroja error
     } else {
       throw new Error('La llamada a la API falló');
     }
+    // ahora pedire el dato,si hay dato damelo en la variable respuestaJson
   }).then((respuestaJson) => {
     return respuestaJson;
+    // todo lo que no funcione capturalo como error
   }).catch((err) => {
     console.error(err);
   });
@@ -45,6 +50,7 @@ window.callCourses = (cohort) => {
 
 // función para obtener usuarios según el cohort desde API
 window.callUsers = (cohorta) => {
+  // en el parametro elimino la letra a usada para diferenciar alumnas de unidades
   return fetch(`https://laboratoria-la-staging.firebaseapp.com/cohorts/${cohorta.slice(0, -1)}/users?role=student&basicProfile=`).then((response) => {
     if (response.ok) {
       return response.json();
