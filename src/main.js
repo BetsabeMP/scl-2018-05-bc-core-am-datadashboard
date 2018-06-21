@@ -44,8 +44,6 @@ const getUnits = (units) => {
       const durationUnit = partObj[part].duration;
       const typeUnit = partObj[part].type;
       console.log('percentObj', percentObj, 'completedUnit', completedUnit, 'durationUnit', durationUnit, 'typeUnit', typeUnit);
-<<<<<<< HEAD
-=======
 
       // sumo completed y duration 
       summationCompleted = summationCompleted + completedUnit;
@@ -87,7 +85,6 @@ const getUnits = (units) => {
       summationCompletedQuiz = summationCompletedQuiz + completedUnitQuiz;
       summationDurationQuiz = summationDurationQuiz + durationUnitQuiz;
       console.log('summationCompletedQuiz', summationCompletedQuiz, 'summationDurationQuiz', summationDurationQuiz);
->>>>>>> upstream/master
     });
     return partDetail;
   });
