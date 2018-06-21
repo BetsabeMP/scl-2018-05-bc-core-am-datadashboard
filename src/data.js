@@ -101,7 +101,7 @@ window.callUsersCohort = (cohortId) => {
   }).catch((err) => {
     console.error(err);
   });
-}
+};
 
 window.computeUsersStats = (users, progress, courses) => {
 
