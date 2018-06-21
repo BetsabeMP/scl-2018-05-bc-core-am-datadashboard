@@ -1,15 +1,22 @@
 // función que escribe los paises en pantalla
 window.writeCountry = (countries) => {
+  // declarar donde escribire lo concatenado, declarada vacio (string) 
   let countryHTML = '';
+  // recorre el arreglo countries por pais(country) 
   for (let country of countries) {
+    // concateno el codigo a escribir
     countryHTML = countryHTML +
       `<div class="pais">
       <p class="txt1">${country.name}</p>
       <button id="${country.id}" class="botonPaises">CONTINUAR</button>
       </div>`;
+    // ciclo hasta que terminen los paises
   };
+  // crea la variable del dom con id 'counter' y en esa insertale (html) lo que concateno
   let divCountry = document.getElementById('counter');
   divCountry.innerHTML = countryHTML;
+
+  // crea la variable del dom con id 'menú'y titulo igual
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
@@ -24,6 +31,7 @@ window.writeCountry = (countries) => {
 window.writeCohort = (cohorts) => {
   let cohortHTML = '';
   for (let cohort of cohorts) {
+    // ${cohort.id}a es para diferenciar los id de unidades y alumnas
     cohortHTML = cohortHTML +
       `<div class="cohort">
       <p class="txt2">${cohort.id}</p>
