@@ -82,7 +82,6 @@ const getUnits = (units) => {
       const durationUnit = partObj[part].duration;
       const typeUnit = partObj[part].type;
       console.log('percentObj', percentObj, 'completedUnit', completedUnit, 'durationUnit', durationUnit, 'typeUnit', typeUnit);
-
     });
     return partDetail;
   });
