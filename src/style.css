@@ -1,4 +1,28 @@
 /*Inicio*/
+.sidenav {
+  position: fixed;
+  z-index: 1;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+a {
+  color: #333333;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 342px;
+  padding: 0px 10px;
+}
+
 .logo {
   height: 3.7rem;
   line-height: 3rem;
@@ -83,7 +107,8 @@
   background-color: #fafafa;
   border-top: groove;
   border-right: groove;
-  height: 36.6rem;
+  border-left-style: groove;
+  padding-bottom: 70%;
 }
 
 /*Sección cohort méxico*/
@@ -207,7 +232,6 @@
   background-color: #FFE521;
   cursor: pointer;
 }
-
 
 
 

@@ -72,7 +72,7 @@ const getUnits = (units) => {
     return units[unit].parts;
   });
   return unitDetail;
-}
+};
 
 const getCourseInfo = (user) => {
   const courses = Object.keys(user);

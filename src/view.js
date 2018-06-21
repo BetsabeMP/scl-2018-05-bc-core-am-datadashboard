@@ -13,11 +13,11 @@ window.writeCountry = (countries) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
-    <p class="menu">MENÚ</p>
+    <p class="menu">DATA DASHBOARD</p>
     </div>`;
   const divTitle = document.getElementById('title');
   divTitle.innerHTML =
-    '<h1 class="titleUno">DATA DASHBOARD</h1>';
+    '<h1 class="titleUno">DATA LABORATORIA</h1>';
 };
 
 // función que escribe cohort en pantalla
@@ -36,7 +36,7 @@ window.writeCohort = (cohorts) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
-    <p class="menu">PAÍS</p>
+    <a href="javascript:history.go('menu')" class="menu">VOLVER AL MENÚ</a>
     </div>`;
   const divTitle = document.getElementById('title');
   divTitle.innerHTML =
@@ -65,7 +65,7 @@ window.writeUser = (users) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
-    <p class="menu">COHORT</p>
+    <a href="javascript:history.go('menu')" class="menu">VOLVER AL MENÚ</a>
     </div>`;
   const divTitle = document.getElementById('title');
   divTitle.innerHTML =
@@ -86,7 +86,7 @@ window.writeCourse = (courses) => {
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
-        <p class="menu">COHORT</p>
+    <a href="javascript:history.go('menu')" class="menu">VOLVER AL MENÚ</a>
       </div>`;
   const divTitle = document.getElementById('title');
   divTitle.innerHTML =
