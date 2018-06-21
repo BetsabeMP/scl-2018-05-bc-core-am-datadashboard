@@ -67,12 +67,21 @@ const getPercentCourse = (user) => {
 
 const getUnits = (units) => {
   const unitsKey = Object.keys(units);
+
   const unitDetail = unitsKey.map(unit => {
+    const partObj = units[unit].parts;
+    // console.log('units[unit].parts', units[unit].parts);
+    // console.log('partObj', partObj);
     // llamar a algo q recorra las sub partes
-    return units[unit].parts;
+    const partKey = Object.keys(units[unit].parts);
+    // console.log('partKey', partKey);
+    const partDetail = partKey.map(part => {
+      console.log(partObj[part].type);
+    });
+    return partDetail;
   });
   return unitDetail;
-}
+};
 
 const getCourseInfo = (user) => {
   const courses = Object.keys(user);
@@ -110,7 +119,6 @@ const UserCohort = (user, cohortId) => {
         //     console.log(found);
         //   };
         // };
-        console.log('>>>', user, '>>>', dataUserCohort[user]);
         infoUser(dataUserCohort[user]);
       });
   });
