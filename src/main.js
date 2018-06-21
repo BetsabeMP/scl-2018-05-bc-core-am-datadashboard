@@ -61,19 +61,64 @@ const course = (cohort) => {
   });
 };
 
+const getPercentCourse = (user) => {
+  const courses = Object.keys(user);
+  const percentList = courses.map(
+    course => user[course].percent
+  ).reduce(
+    (tot, value) => tot + value
+  );
+  return (percentList / courses.length);
+};
+
+const getUnits = (units) => {
+  const unitsKey = Object.keys(units);
+  const unitDetail = unitsKey.map(unit => {
+    // llamar a algo q recorra las sub partes
+    return units[unit].parts;
+  });
+  return unitDetail;
+}
+
+const getCourseInfo = (user) => {
+  const courses = Object.keys(user);
+
+  let coursesInfo = [];
+
+  for (let course of courses) {
+    coursesInfo[course] = getUnits(user[course].units);
+  };
+
+  return coursesInfo;
+};
+
+// funcion para trabajar datos de alumnas
+const infoUser = (user) => {
+  const percentCourse = getPercentCourse(user);
+  const courseInfo = getCourseInfo(user);
+
+  console.info('salida', {
+    percentCourse,
+    courseInfo
+  });
+};
+
 // función para obtener progreso de una alumna de un cohort 
 const UserCohort = (user, cohortId) => {
   const btn = document.getElementById(user);
   btn.addEventListener('click', () => {
     window.callUsersCohort(cohortId)
       .then((dataUserCohort) => {
-        const userCohortArr = Object.entries(dataUserCohort);
-        for (let i = 0; i < userCohortArr.length; i++) {
-          if (userCohortArr[i][0] === user) {
-            let found = userCohortArr[i];
-            console.log(found);
-          };
-        };
+        // const userCohortArr = Object.entries(dataUserCohort);
+        // for (let i = 0; i < userCohortArr.length; i++) {
+        //   if (userCohortArr[i][0] === user) {
+        //     let found = userCohortArr[i];
+        //     console.log(found);
+        //   };
+        // };
+        console.log('>>>', user, '>>>', dataUserCohort[user]);
+        infoUser(dataUserCohort[user]);
       });
   });
 };
+
