@@ -116,7 +116,7 @@ window.writeProgress = (progress) => {
   for (let unit of progressKey) {
     progressHTML = progressHTML +
       `<div>
-      <table style="width:100%">
+      <table style="" class= "styleTable">
         <tr>
           <th></th>
           <th></th>
@@ -125,7 +125,7 @@ window.writeProgress = (progress) => {
           <th>Porcentaje</th>
         </tr>
         <tr>
-          <th>${unit}</th>
+          <th class="program">${unit}</th>
           <td></td>
           <td>sumcomplTotal</td>
           <td>sumdurtTotal</td>
@@ -133,21 +133,21 @@ window.writeProgress = (progress) => {
         </tr>
         <tr>
           <td></td>
-          <td>Read</td>
+          <td class="unitClass">Read</td>
           <td>sumcomplRead</td>
           <td>sumdurtRead</td>
           <td>porceRead</td>
         </tr>
         <tr>
           <td></td>
-          <td>Practice</td>
+          <td class="unitClass">Practice</td>
           <td>sumcomplPractice</td>
           <td>sumdurtPractice</td>
           <td>porcePractice</td>
         </tr>
         <tr>
           <td></td>
-          <td>Quiz</td>
+          <td class="unitClass">Quiz</td>
           <td>sumcomplQuiz</td>
           <td>sumdurtQuiz</td>
           <td>porceQuiz</td>
@@ -162,7 +162,7 @@ window.writeProgress = (progress) => {
   <table style="width:100%">
   <tr>
     <th>Porcentaje completitud alumna</th>
-    <td>${progress.percentCourse} %</td>
+    <td class="percentAlumn">${progress.percentCourse} %</td>
   </tr>
     </table>
 </div>`;

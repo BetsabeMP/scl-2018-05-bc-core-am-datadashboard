@@ -237,7 +237,35 @@ a {
   cursor: pointer;
 }
 
+/*tablas progreso alumnas*/
+.styleTable {
+  background-color:white;
+  margin-top: 1rem;
+  box-shadow: 2px 2px 5px #999;
+  width: 50rem;
+  margin-left: -4rem;
+}
+
+.program {
+  text-indent: 1rem;
+}
+
+.unitClass {
+  color: #ff009e69;
+  font-weight: bold;
+}
+
+.percentAlumn {
+  border: solid 0.1rem #000000;
+  border-color: #ff009e69;
+  text-align: center;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1024px) {
+  .txt1 {
+    width: 40rem;
+    font-size: 1.5rem;
+  }
   .col-3 {
     max-width: 31%;
   }
@@ -245,14 +273,29 @@ a {
     padding-bottom: 135%;
   }
   .pais {
-    height: 9rem;
+    height: 7rem;
     font-size: 2rem;
     margin-bottom: 3rem;
     margin-top: 3rem;
     margin-right: -2rem;
   }
   .botonPaises {
-    margin-top: 4.5rem;
+    margin-top: -0.5rem;
+    font-size: 1.5rem;
+    height: 3rem;
+  }
+  .logoTM, .menuLeft {
+    width: 21rem;
+  }
+  .styleTable {
+    width: 40rem;
+  }
+  .cohort {
+    width: 40rem;
+    margin-left: -4rem;
+  }
+  .txt2 {
+    font-size: 1.3rem;
   }
 }
 
