@@ -222,7 +222,7 @@ const userInput = (dataUsers) => {
 
         userCohortInput(user.id, user.signupCohort, user.name);
       } else {
-        window.writeAlert();
+        window.writeLoading();
       };
     };
   });
