@@ -155,6 +155,9 @@ window.writeProgress = (progress) => {
       </table>
     </div>`;
   };
+  let nameProgress = `<div>
+  <h1>Name User</h1>
+</div>`;
   let percentProgress = `<div>
   <table style="width:100%">
   <tr>
@@ -164,6 +167,6 @@ window.writeProgress = (progress) => {
     </table>
 </div>`;
   let divprogress = document.getElementById('counter');
-  divprogress.innerHTML = percentProgress + progressHTML;
+  divprogress.innerHTML = nameProgress + percentProgress + progressHTML;
 
 };
