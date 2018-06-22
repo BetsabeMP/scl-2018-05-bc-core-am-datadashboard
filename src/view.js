@@ -187,3 +187,12 @@ window.writeAlert = () => {
   let divAlert = document.getElementById('counter');
   divAlert.innerHTML = alertHTML;
 };
+
+// función loading
+window.writeLoading = () => {
+  const loadingHTML = `<div class="catLoading">
+  <img src="https://loading.io/spinners/bluecat/lg.blue-longcat-spinner.gif" alt="gatito">
+</div>`;
+  let divLoading = document.getElementById('counter');
+  divLoading.innerHTML = loadingHTML;
+};

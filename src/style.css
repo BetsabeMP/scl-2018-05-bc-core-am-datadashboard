@@ -285,6 +285,11 @@ th {
   text-align: center;
 }
 
+.catLoading {
+  margin-top: 8rem;
+  margin-left: 10rem;
+}
+
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .txt1 {
@@ -325,7 +330,9 @@ th {
   td {
     width: 7rem;
   }
-
+  .catLoading {
+    margin-left: 6rem;
+  }
 }
 
 
