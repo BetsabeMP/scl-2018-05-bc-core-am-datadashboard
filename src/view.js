@@ -128,41 +128,41 @@ window.writeProgress = (progress, name) => {
         </tr>
         <tr>
           <th class="program">${unit}</th>
-          <td></td>
+          <th></th>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationCompleted) * 100) / 100}</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationDuration) * 100) / 100}</td>
-          <td>${Math.round(((progress.courseInfo[unit].totUnitSummationCompleted * 100) / progress.courseInfo[unit].totUnitSummationDuration) * 100) / 100 || 0} %</td>
+          <td class="lastTd">${Math.round(((progress.courseInfo[unit].totUnitSummationCompleted * 100) / progress.courseInfo[unit].totUnitSummationDuration) * 100) / 100 || 0} %</td>
         </tr>
         <tr>
-          <td></td>
+          <th></th>
           <td class="unitClass">Read</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationCompletedRead) * 100) / 100}</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationDurationRead) * 100) / 100}</td>
-          <td>${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedRead * 100) / progress.courseInfo[unit].totUnitSummationDurationRead) * 100) / 100 || 0} %</td>
+          <td class="lastTd">${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedRead * 100) / progress.courseInfo[unit].totUnitSummationDurationRead) * 100) / 100 || 0} %</td>
         </tr>
         <tr>
-          <td></td>
+          <th></th>
           <td class="unitClass">Practice</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationCompletedPractice) * 100) / 100}</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationDurationPractice) * 100) / 100}</td>
-          <td>${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedPractice * 100) / progress.courseInfo[unit].totUnitSummationDurationPractice) * 100) / 100 || 0} %</td>
+          <td class="lastTd">${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedPractice * 100) / progress.courseInfo[unit].totUnitSummationDurationPractice) * 100) / 100 || 0} %</td>
         <tr>
-          <td></td>
+          <th></th>
           <td class="unitClass">Quiz</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationCompletedQuiz) * 100) / 100}</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationDurationQuiz) * 100) / 100}</td>
-          <td>${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedQuiz * 100) / progress.courseInfo[unit].totUnitSummationDurationQuiz) * 100) / 100 || 0} %</td>
+          <td class="lastTd">${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedQuiz * 100) / progress.courseInfo[unit].totUnitSummationDurationQuiz) * 100) / 100 || 0} %</td>
         </tr>
       </table>
     </div>`;
   };
 
-  let nameProgress = `<div>
+  let nameProgress = `<div class="nameProgress">
   <h1>${name}</h1>
 </div>`;
   let percentProgress = `<div>
   <table style="width:100%">
-  <tr>
+  <tr class= "squarePercent">
     <th>Porcentaje completitud alumna</th>
     <td class="percentAlumn">${progress.percentCourse} %</td>
   </tr>
