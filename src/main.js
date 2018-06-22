@@ -195,18 +195,21 @@ const userCohort = (user, cohortId, name) => {
 
 // función para buscar nombre desde input, aun no util
 const userInput = (dataUsers) => {
-  const inpt = document.getElementById('inputButton');
+
   // const inptUpper = inpt.toUpperCase();
   const dataKey = Object.keys(dataUsers);
-  console.log('dataUsers', dataUsers, 'inpt', inpt, 'dataKey', dataKey);
+  console.log('dataUsers', dataUsers, 'dataKey', dataKey);
 
   const btn = document.getElementById('inputButton');
   btn.addEventListener('click', () => {
-    for (let index of dataKey) {
-      console.log('name', dataUsers[index].name);
-      let name = dataUsers[index].name;
+    let inpt = document.getElementById('inputName').value;
+    let inptUpper = inpt.toUpperCase();
 
-      if (inpt === name) {
+    for (let index of dataKey) {
+      let name = dataUsers[index].name;
+      let nameUpper = name.toUpperCase();
+
+      if (inptUpper === nameUpper) {
         console.log('encontrado');
 
         let user = dataUsers[index];
