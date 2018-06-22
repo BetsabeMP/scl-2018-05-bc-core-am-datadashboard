@@ -175,3 +175,15 @@ window.writeProgress = (progress, name) => {
   let divprogress = document.getElementById('counter');
   divprogress.innerHTML = nameProgress + percentProgress + progressHTML;
 };
+
+// función para alerta
+window.writeAlert = () => {
+  const alertHTML = `<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">ERROR!!!</h4>
+  <p class="pAlert">El nombre que ha ingreso no se encuentra en la lista</p>
+  <hr>
+  <p class="mb-0">Realice nuevamente la búsqueda.</p>
+</div>`;
+  let divAlert = document.getElementById('counter');
+  divAlert.innerHTML = alertHTML;
+};
