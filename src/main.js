@@ -204,6 +204,8 @@ const userCohortInput = (user, cohortId, name) => {
 
 // función para buscar nombre desde input
 const userInput = (dataUsers) => {
+  console.log('dataUsers', dataUsers);
+
   // const inptUpper = inpt.toUpperCase();
   const dataKey = Object.keys(dataUsers);
 
@@ -215,17 +217,23 @@ const userInput = (dataUsers) => {
     for (let index of dataKey) {
       let name = dataUsers[index].name;
       let nameUpper = name.toUpperCase();
+      let nameId = dataUsers[index].id;
 
       if (inptUpper === nameUpper) {
         console.log('encontrado');
         let user = dataUsers[index];
-
         userCohortInput(user.id, user.signupCohort, user.name);
-      } else {
-        window.writeAlert();
       };
+      if (inpt === nameId) {
+        let user = dataUsers[index];
+        userCohortInput(user.id, user.signupCohort, user.name);
+      }
+      window.writeAlert();
+
     };
+
   });
+
 };
 
 
