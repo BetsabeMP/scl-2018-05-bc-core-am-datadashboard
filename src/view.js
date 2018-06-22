@@ -147,8 +147,8 @@ window.writeProgress = (progress, name) => {
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationDurationPractice) * 100) / 100}</td>
           <td>${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedPractice * 100) / progress.courseInfo[unit].totUnitSummationDurationPractice) * 100) / 100 || 0} %</td>
         <tr>
-          <td class="unitClass"></td>
-          <td>Quiz</td>
+          <td></td>
+          <td class="unitClass">Quiz</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationCompletedQuiz) * 100) / 100}</td>
           <td>${Math.round((progress.courseInfo[unit].totUnitSummationDurationQuiz) * 100) / 100}</td>
           <td>${Math.round(((progress.courseInfo[unit].totUnitSummationCompletedQuiz * 100) / progress.courseInfo[unit].totUnitSummationDurationQuiz) * 100) / 100 || 0} %</td>
