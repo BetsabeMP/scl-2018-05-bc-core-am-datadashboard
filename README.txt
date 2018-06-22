@@ -2,7 +2,7 @@
 
 ## Introducción
 
-[Wikipedia](https://goo.gl/P7PF4y) nos dice que un dashboard puede ser un resumen
+:point_right: [Wikipedia](https://goo.gl/P7PF4y) nos dice que un dashboard puede ser un resumen
 gráfico de varias piezas de información importante, generalmente utilizadas para dar
 una visión general de una empresa o de un servicio.
 
