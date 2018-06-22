@@ -1,6 +1,7 @@
 // función que al cargar página carga funciones de datos y escritura
 window.onload = () => {
   // llama la función callContry
+  window.writeLoading();
   window.callCountry()
     // cuando tengas la respuesta de fetch escribela como dataCountry
     .then((dataCountry) => {
@@ -204,8 +205,6 @@ const userCohortInput = (user, cohortId, name) => {
 
 // función para buscar nombre desde input
 const userInput = (dataUsers) => {
-  console.log('dataUsers', dataUsers);
-
   // const inptUpper = inpt.toUpperCase();
   const dataKey = Object.keys(dataUsers);
 
@@ -219,21 +218,13 @@ const userInput = (dataUsers) => {
       let nameUpper = name.toUpperCase();
       let nameId = dataUsers[index].id;
 
-      if (inptUpper === nameUpper) {
-        console.log('encontrado');
+      if (inptUpper === nameUpper || inpt === nameId) {
         let user = dataUsers[index];
         userCohortInput(user.id, user.signupCohort, user.name);
       };
-      if (inpt === nameId) {
-        let user = dataUsers[index];
-        userCohortInput(user.id, user.signupCohort, user.name);
-      }
-      window.writeAlert();
-
+      window.writeLoading();
     };
-
   });
-
 };
 
 

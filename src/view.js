@@ -89,7 +89,7 @@ window.writeUser = (users) => {
   let divUser = document.getElementById('counter');
   divUser.innerHTML =
     `<div class="inputAlumnas">
-    <input id="inputName" type="text" placeholder="Nombre">
+    <input id="inputName" type="text" placeholder="Nombre o ID">
     <button id="inputButton">BUSCAR</button>
     </div>
     <br>
@@ -191,7 +191,7 @@ window.writeAlert = () => {
 // función loading
 window.writeLoading = () => {
   const loadingHTML = `<div class="catLoading">
-  <img src="https://loading.io/spinners/bluecat/lg.blue-longcat-spinner.gif" alt="gatito">
+  <img src="https://orig00.deviantart.net/4896/f/2015/364/4/2/gato_by_datsick35-d9m0nzc.gif" alt="gatito">
 </div>`;
   let divLoading = document.getElementById('counter');
   divLoading.innerHTML = loadingHTML;

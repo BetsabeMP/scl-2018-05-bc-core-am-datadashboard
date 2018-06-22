@@ -1,4 +1,5 @@
 /*Inicio*/
+
 .menu {
   font-weight: bold;
 }
@@ -116,6 +117,7 @@ a {
 }
 
 /*Sección cohort méxico*/
+
 .cohort {
   font-family: 'Open Sans', sans-serif;
   color: #333333;
@@ -154,6 +156,7 @@ a {
 }
 
 /*Sección alumnas cdmx-2017-10-bc-core-pm*/
+
 .user {
   width: 41rem;
 }
@@ -195,8 +198,8 @@ a {
 }
 
 /*Cohort lima*/
-#lim-2017-09-bc-core-am, #lim-2017-09-bc-core-ama, #lim-2017-09-bc-core-pm, #lim-2017-09-bc-core-pma, #lim-2017-09-ec-js-functional, #lim-2017-09-ec-js-functionala, #lim-2017-10-ec-js-paradigms, #lim-2017-10-ec-js-paradigmsa, #lim-2017-10-ec-js-react, #lim-2017-10-ec-js-reacta, #lim-2017-11-ec-js-angular-fundamentals, #lim-2017-11-ec-js-angular-fundamentalsa, #lim-2017-11-ec-js-redux, #lim-2017-11-ec-js-reduxa, #lim-2018-01-bc-js-front-end-developer, #lim-2018-01-bc-js-front-end-developera, #lim-2018-01-bc-ux-ux-designer, #lim-2018-01-bc-ux-ux-designera, #lim-2018-01-ec-js-chatbot, #lim-2018-01-ec-js-chatbota, #lim-2018-01-ec-js-funcionaljs, #lim-2018-01-ec-js-funcionaljsa, #lim-2018-03-jp-core-talento-lima, #lim-2018-03-jp-core-talento-limaa, #lim-2018-03-pre-core-pw, #lim-2018-03-pre-core-pwa, #lim-2018-06-bc-ux-test-ux, #lim-2018-06-bc-ux-test-uxa, #lim-2018-06-jp-core-new-ui
-, #lim-2018-06-jp-core-new-uia, #lim-2018-06-pre-js-prework-test, #lim-2018-06-pre-js-prework-testa, #lim-2018-06-pre-js-test-arun, #lim-2018-06-pre-js-test-aruna{
+
+#lim-2017-09-bc-core-am, #lim-2017-09-bc-core-ama, #lim-2017-09-bc-core-pm, #lim-2017-09-bc-core-pma, #lim-2017-09-ec-js-functional, #lim-2017-09-ec-js-functionala, #lim-2017-10-ec-js-paradigms, #lim-2017-10-ec-js-paradigmsa, #lim-2017-10-ec-js-react, #lim-2017-10-ec-js-reacta, #lim-2017-11-ec-js-angular-fundamentals, #lim-2017-11-ec-js-angular-fundamentalsa, #lim-2017-11-ec-js-redux, #lim-2017-11-ec-js-reduxa, #lim-2018-01-bc-js-front-end-developer, #lim-2018-01-bc-js-front-end-developera, #lim-2018-01-bc-ux-ux-designer, #lim-2018-01-bc-ux-ux-designera, #lim-2018-01-ec-js-chatbot, #lim-2018-01-ec-js-chatbota, #lim-2018-01-ec-js-funcionaljs, #lim-2018-01-ec-js-funcionaljsa, #lim-2018-03-jp-core-talento-lima, #lim-2018-03-jp-core-talento-limaa, #lim-2018-03-pre-core-pw, #lim-2018-03-pre-core-pwa, #lim-2018-06-bc-ux-test-ux, #lim-2018-06-bc-ux-test-uxa, #lim-2018-06-jp-core-new-ui, #lim-2018-06-jp-core-new-uia, #lim-2018-06-pre-js-prework-test, #lim-2018-06-pre-js-prework-testa, #lim-2018-06-pre-js-test-arun, #lim-2018-06-pre-js-test-aruna {
   float: right;
   margin-top: 4rem;
   margin-right: 0.5rem;
@@ -206,6 +209,7 @@ a {
 }
 
 /*Unidad cdmx-2017-10-bc-core-pm*/
+
 .course {
   font-family: 'Open Sans', sans-serif;
   color: #333333;
@@ -218,6 +222,7 @@ a {
 }
 
 /*Cohort Santiago*/
+
 #scl-2017-09-bc-core-am, #scl-2017-09-bc-core-ama, #scl-2017-09-bc-core-pm, #scl-2017-09-bc-core-pma, #scl-2017-09-ec-js-functional, #scl-2017-09-ec-js-functionala, #scl-2017-11-ec-js-paradigms, #scl-2017-11-ec-js-paradigmsa, #scl-2017-11-ec-js-react, #scl-2017-11-ec-js-reacta, #scl-2018-01-bc-js-front-end-developer, #scl-2018-01-bc-js-front-end-developera, #scl-2018-01-bc-ux-ux-designer, #scl-2018-01-bc-ux-ux-designera, #scl-2018-01-ec-js-angular, #scl-2018-01-ec-js-angulara, #scl-2018-01-ec-js-chatbot, #scl-2018-01-ec-js-chatbota, #scl-2018-03-ec-ux-research, #scl-2018-03-ec-ux-researcha, #scl-2018-03-pre-core-pw, #scl-2018-03-pre-core-pwa {
   float: right;
   margin-top: 4rem;
@@ -228,6 +233,7 @@ a {
 }
 
 /*Cohort Sao Paulo*/
+
 #spl-2018-03-pre-core-pw, #spl-2018-03-pre-core-pwa, #spl-2018-05-bc-js-front-end-developer, #spl-2018-05-bc-js-front-end-developera {
   float: right;
   margin-top: 4rem;
@@ -238,8 +244,9 @@ a {
 }
 
 /*tablas progreso alumnas*/
+
 .styleTable {
-  background-color:white;
+  background-color: white;
   margin-top: 2rem;
   box-shadow: 2px 2px 5px #999;
   width: 50rem;
@@ -272,7 +279,7 @@ th {
 }
 
 .squarePercent {
-  background-color:white;
+  background-color: white;
   margin-top: 1rem;
   box-shadow: 2px 2px 5px #999;
 }
@@ -287,9 +294,8 @@ th {
 
 .catLoading {
   margin-top: 8rem;
-  margin-left: 10rem;
+  margin-left: 3rem;
 }
-
 
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .txt1 {
@@ -334,7 +340,6 @@ th {
     margin-left: 6rem;
   }
 }
-
 
 /*
 bitter regular para los titulos
