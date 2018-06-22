@@ -193,11 +193,18 @@ const userCohort = (user, cohortId, name) => {
 };
 
 
+const userCohortInput = (user, cohortId, name) => {
+  window.callUsersCohort(cohortId)
+    .then((datauserCohort) => {
+      const infoUser = getInfoUser(datauserCohort[user]);
+      window.writeProgress(infoUser, name);
+    });
+};
+
 // función para buscar nombre desde input, aun no util
 const userInput = (dataUsers) => {
   // const inptUpper = inpt.toUpperCase();
   const dataKey = Object.keys(dataUsers);
-  console.log('dataUsers', dataUsers, 'dataKey', dataKey);
 
   const btn = document.getElementById('inputButton');
   btn.addEventListener('click', () => {
@@ -210,11 +217,12 @@ const userInput = (dataUsers) => {
 
       if (inptUpper === nameUpper) {
         console.log('encontrado');
-
         let user = dataUsers[index];
 
-        console.log('user', user);
-      };
+        userCohortInput(user.id, user.signupCohort, user.name);
+      } else {
+
+      }
     };
   });
 };
