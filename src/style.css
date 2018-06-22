@@ -277,6 +277,15 @@ th {
   box-shadow: 2px 2px 5px #999;
 }
 
+.alert-success {
+  margin-top: 5rem;
+}
+
+.alert-heading, .mb-0, .pAlert {
+  text-align: center;
+}
+
+
 @media screen and (min-width: 320px) and (max-width: 1024px) {
   .txt1 {
     width: 40rem;

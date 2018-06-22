@@ -193,6 +193,7 @@ const userCohort = (user, cohortId, name) => {
 };
 
 
+// función para obtener progreso de una alumna de input
 const userCohortInput = (user, cohortId, name) => {
   window.callUsersCohort(cohortId)
     .then((datauserCohort) => {
@@ -201,7 +202,7 @@ const userCohortInput = (user, cohortId, name) => {
     });
 };
 
-// función para buscar nombre desde input, aun no util
+// función para buscar nombre desde input
 const userInput = (dataUsers) => {
   // const inptUpper = inpt.toUpperCase();
   const dataKey = Object.keys(dataUsers);
@@ -221,8 +222,8 @@ const userInput = (dataUsers) => {
 
         userCohortInput(user.id, user.signupCohort, user.name);
       } else {
-
-      }
+        window.writeAlert();
+      };
     };
   });
 };
