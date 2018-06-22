@@ -173,7 +173,8 @@ const getInfoUser = (user) => {
 };
 
 // función para obtener progreso de una alumna de un cohort 
-const userCohort = (user, cohortId) => {
+const userCohort = (user, cohortId, name) => {
+
   // en boton el id esta con user
   const btn = document.getElementById(user);
   btn.addEventListener('click', () => {
@@ -183,9 +184,9 @@ const userCohort = (user, cohortId) => {
         // obtengo un objeto
         // ejecuta la funcion infoUser dandole datauserCohort.user necesarios para trabajar con el progreso de la alumna
         const infoUser = getInfoUser(datauserCohort[user]);
-        console.info('salida', infoUser);
+        // console.info('salida', infoUser);
 
-        window.writeProgress(infoUser);
+        window.writeProgress(infoUser, name);
       });
   });
 };
@@ -202,15 +203,17 @@ const userInput = (users) => {
 
 // función para obtener usuarios según el cohort y escribirlos
 const user = (cohorta) => {
+
   const btn = document.getElementById(cohorta);
   btn.addEventListener('click', () => {
     window.callUsers(cohorta)
       .then((dataUsers) => {
+
         window.writeUser(dataUsers);
 
         // sigue el ciclo dandole datos a userInput y userCohort
         dataUsers.map(users => userInput(users.id));
-        dataUsers.map(users => userCohort(users.id, users.signupCohort));
+        dataUsers.map(users => userCohort(users.id, users.signupCohort, users.name));
       });
   });
 };
