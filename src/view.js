@@ -51,6 +51,27 @@ window.writeCohort = (cohorts) => {
     '<h1 class="titleUno">COHORT</h1>';
 };
 
+// función que escribe course en pantalla
+window.writeCourse = (courses) => {
+  let courseHTML = '';
+  for (let course of courses) {
+    courseHTML = courseHTML +
+      `<div class="course">
+      <p class="txt2">${course.id}</p>
+      </div>`;
+  };
+  let divCourse = document.getElementById('counter');
+  divCourse.innerHTML = courseHTML;
+  const divMenu = document.getElementById('menu');
+  divMenu.innerHTML =
+    `<div class="col menuLeft">
+    <a href="javascript:history.go('menu')" class="menu">VOLVER AL MENÚ</a>
+      </div>`;
+  const divTitle = document.getElementById('title');
+  divTitle.innerHTML =
+    '<h1 class="titleUno">UNIDADES</h1>';
+};
+
 // función que escribe input y alumnas en pantalla
 window.writeUser = (users) => {
   let userHTML = '';
@@ -80,24 +101,69 @@ window.writeUser = (users) => {
     '<h1 class="titleUno">ALUMNAS</h1>';
 };
 
-// función que escribe course en pantalla
-window.writeCourse = (courses) => {
-  let courseHTML = '';
-  for (let course of courses) {
-    courseHTML = courseHTML +
-      `<div class="course">
-      <p class="txt2">${course.id}</p>
-      </div>`;
-  };
-  let divCourse = document.getElementById('counter');
-  divCourse.innerHTML = courseHTML;
+window.writeProgress = (progress) => {
+  const progressKey = Object.keys(progress.courseInfo);
   const divMenu = document.getElementById('menu');
   divMenu.innerHTML =
     `<div class="col menuLeft">
     <a href="javascript:history.go('menu')" class="menu">VOLVER AL MENÚ</a>
-      </div>`;
+    </div>`;
   const divTitle = document.getElementById('title');
   divTitle.innerHTML =
-    '<h1 class="titleUno">UNIDADES</h1>';
-};
+    '<h1 class="titleUno">ALUMNA</h1>';
 
+  let progressHTML = '';
+  for (let unit of progressKey) {
+    progressHTML = progressHTML +
+      `<div>
+      <table style="width:100%">
+        <tr>
+          <th></th>
+          <th></th>
+          <th>Completado</th>
+          <th>Duración</th>
+          <th>Porcentaje</th>
+        </tr>
+        <tr>
+          <th>${unit}</th>
+          <td></td>
+          <td>sumcomplTotal</td>
+          <td>sumdurtTotal</td>
+          <td>porceTotal</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Read</td>
+          <td>sumcomplRead</td>
+          <td>sumdurtRead</td>
+          <td>porceRead</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Practice</td>
+          <td>sumcomplPractice</td>
+          <td>sumdurtPractice</td>
+          <td>porcePractice</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>Quiz</td>
+          <td>sumcomplQuiz</td>
+          <td>sumdurtQuiz</td>
+          <td>porceQuiz</td>
+        </tr>
+      </table>
+    </div>`;
+  };
+  let percentProgress = `<div>
+  <table style="width:100%">
+  <tr>
+    <th>Porcentaje completitud alumna</th>
+    <td>${progress.percentCourse} %</td>
+  </tr>
+    </table>
+</div>`;
+  let divprogress = document.getElementById('counter');
+  divprogress.innerHTML = percentProgress + progressHTML;
+
+};
