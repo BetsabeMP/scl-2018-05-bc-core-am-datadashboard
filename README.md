@@ -49,7 +49,7 @@ Después concluimos el diseño creando un sketch de la solución (usando lápiz 
 creamos el diseño de la interfaz de usuario que representaría el ideal de la solución y continuamos
 con la implementación hasta el final.
 
-![captura pantalla tabla](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/blob/master/img/capturaTabla.PNG)
+![captura pantalla tabla](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/img/capturaTabla.PNG)
 
 ## Guía de instalación
 

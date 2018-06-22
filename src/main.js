@@ -195,7 +195,6 @@ const userCohort = (user, cohortId, name) => {
 
 // función para buscar nombre desde input, aun no util
 const userInput = (dataUsers) => {
-
   // const inptUpper = inpt.toUpperCase();
   const dataKey = Object.keys(dataUsers);
   console.log('dataUsers', dataUsers, 'dataKey', dataKey);
