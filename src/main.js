@@ -14,16 +14,15 @@ window.onload = () => {
     });
 };
 
+
 // función para obtener datos de cada tema y unidad
 const getUnits = (units) => {
-  // console.log('units', units);
-
-
   // unitsKey obtengo subindice de unidades (0,1,2,...)
   const unitsKey = Object.keys(units);
 
   // recorro arreglo units segun sub indice y obtengo parts y percent
 
+  // declaro variables para las sumatorias
   let totUnitSummationCompleted = 0;
   let totUnitSummationDuration = 0;
   let totUnitSummationCompletedRead = 0;
@@ -32,14 +31,14 @@ const getUnits = (units) => {
   let totUnitSummationDurationPractice = 0;
   let totUnitSummationCompletedQuiz = 0;
   let totUnitSummationDurationQuiz = 0;
+
+  // partKey obtengo subindice de unidades (0,1,2,...)
   for (let unit of unitsKey) {
     const partObj = units[unit].parts;
 
-    // partKey obtengo subindice de unidades (0,1,2,...)
     const partKey = Object.keys(units[unit].parts);
 
-    // recorro arreglo partObj segun sub indice partKey y obtengo duraciones y type
-
+    // declaro variables para las sumatorias
     let totSummationCompleted = 0;
     let totSummationDuration = 0;
     let totSummationCompletedRead = 0;
@@ -49,11 +48,11 @@ const getUnits = (units) => {
     let totSummationCompletedQuiz = 0;
     let totSummationDurationQuiz = 0;
 
+    // recorro arreglo partObj segun sub indice partKey y obtengo duraciones y type
     for (let part of partKey) {
       const completedUnit = partObj[part].completed;
       const durationUnit = partObj[part].duration;
       const typeUnit = partObj[part].type;
-      // console.log('percentObj', percentObj, 'completedUnit', completedUnit, 'durationUnit', durationUnit, 'typeUnit', typeUnit);
 
       // declaro variables para las sumatorias
       let summationCompleted = 0;
@@ -68,7 +67,6 @@ const getUnits = (units) => {
       // sumo completed y duration 
       summationCompleted = summationCompleted + completedUnit;
       summationDuration = summationDuration + durationUnit;
-      // console.log('summationCompleted', summationCompleted, 'summationDuration', summationDuration);
 
       // sumo con read
       if (typeUnit === 'read') {
@@ -80,7 +78,6 @@ const getUnits = (units) => {
       };
       summationCompletedRead = summationCompletedRead + completedUnitRead;
       summationDurationRead = summationDurationRead + durationUnitRead;
-      // console.log('summationCompletedRead', summationCompletedRead, 'summationDurationRead', summationDurationRead);
 
       // sumo con practice
       if (typeUnit === 'practice') {
@@ -92,7 +89,6 @@ const getUnits = (units) => {
       };
       summationCompletedPractice = summationCompletedPractice + completedUnitPractice;
       summationDurationPractice = summationDurationPractice + durationUnitPractice;
-      // console.log('summationCompletedPractice', summationCompletedPractice, 'summationDurationPractice', summationDurationPractice);
 
       // sumo con quiz
       if (typeUnit === 'quiz') {
@@ -104,8 +100,8 @@ const getUnits = (units) => {
       };
       summationCompletedQuiz = summationCompletedQuiz + completedUnitQuiz;
       summationDurationQuiz = summationDurationQuiz + durationUnitQuiz;
-      // console.log('summationCompletedQuiz', summationCompletedQuiz, 'summationDurationQuiz', summationDurationQuiz);
 
+      // sumatoria en las partes      
       totSummationCompleted += summationCompleted;
       totSummationDuration += summationDuration;
       totSummationCompletedRead += summationCompletedRead;
@@ -116,6 +112,7 @@ const getUnits = (units) => {
       totSummationDurationQuiz += summationDurationQuiz;
     };
 
+    // sumatoria en las unidades
     totUnitSummationCompleted += totSummationCompleted;
     totUnitSummationDuration += totSummationDuration;
     totUnitSummationCompletedRead += totSummationCompletedRead;
@@ -125,6 +122,7 @@ const getUnits = (units) => {
     totUnitSummationCompletedQuiz += totSummationCompletedQuiz;
     totUnitSummationDurationQuiz += totSummationDurationQuiz;
   };
+  // retorno de objeto 
   return {
     totUnitSummationCompleted,
     totUnitSummationDuration,
@@ -137,6 +135,7 @@ const getUnits = (units) => {
   };
 };
 
+
 // función para obtener unidades y courses  desde la info de alumna
 const getCourseInfo = (user) => {
   const courses = Object.keys(user);
@@ -148,6 +147,7 @@ const getCourseInfo = (user) => {
   return coursesInfo;
 };
 
+
 // función calcula porcentaje total
 const getPercentCourse = (user) => {
   // user es un objeto x eso uso Object.keys para obtener un arreglo solo con las keys
@@ -157,6 +157,7 @@ const getPercentCourse = (user) => {
   // la sumatoria/cantidad de unidades y obtengo porcentaje total
   return (percentList / courses.length);
 };
+
 
 // funcion para trabajar datos de alumnas
 const getInfoUser = (user) => {
@@ -172,9 +173,9 @@ const getInfoUser = (user) => {
   };
 };
 
+
 // función para obtener progreso de una alumna de un cohort 
 const userCohort = (user, cohortId, name) => {
-
   // en boton el id esta con user
   const btn = document.getElementById(user);
   btn.addEventListener('click', () => {
@@ -191,28 +192,42 @@ const userCohort = (user, cohortId, name) => {
   });
 };
 
+
 // función para buscar nombre desde input, aun no util
-const userInput = (users) => {
+const userInput = (dataUsers) => {
   const inpt = document.getElementById('inputButton');
-  inpt.addEventListener('click', () => {
-    window.callUserInput(users)
-      .then((dataUserInput) => {
-      });
+  // const inptUpper = inpt.toUpperCase();
+  const dataKey = Object.keys(dataUsers);
+  console.log('dataUsers', dataUsers, 'inpt', inpt, 'dataKey', dataKey);
+
+  const btn = document.getElementById('inputButton');
+  btn.addEventListener('click', () => {
+    for (let index of dataKey) {
+      console.log('name', dataUsers[index].name);
+      let name = dataUsers[index].name;
+
+      if (inpt === name) {
+        console.log('encontrado');
+
+        let user = dataUsers[index];
+
+        console.log('user', user);
+      };
+    };
   });
 };
 
+
 // función para obtener usuarios según el cohort y escribirlos
 const user = (cohorta) => {
-
   const btn = document.getElementById(cohorta);
   btn.addEventListener('click', () => {
     window.callUsers(cohorta)
       .then((dataUsers) => {
-
         window.writeUser(dataUsers);
 
         // sigue el ciclo dandole datos a userInput y userCohort
-        dataUsers.map(users => userInput(users.id));
+        userInput(dataUsers);
         dataUsers.map(users => userCohort(users.id, users.signupCohort, users.name));
       });
   });
@@ -229,6 +244,7 @@ const course = (cohort) => {
       });
   });
 };
+
 
 // función para obtener cohort según el campus y escribirlos
 const cohort = (campus) => {

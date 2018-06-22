@@ -27,6 +27,7 @@ window.writeCountry = (countries) => {
     '<h1 class="titleUno">DATA LABORATORIA</h1>';
 };
 
+
 // función que escribe cohort en pantalla
 window.writeCohort = (cohorts) => {
   let cohortHTML = '';
@@ -51,6 +52,7 @@ window.writeCohort = (cohorts) => {
     '<h1 class="titleUno">COHORT</h1>';
 };
 
+
 // función que escribe course en pantalla
 window.writeCourse = (courses) => {
   let courseHTML = '';
@@ -71,6 +73,7 @@ window.writeCourse = (courses) => {
   divTitle.innerHTML =
     '<h1 class="titleUno">UNIDADES</h1>';
 };
+
 
 // función que escribe input y alumnas en pantalla
 window.writeUser = (users) => {
@@ -100,6 +103,7 @@ window.writeUser = (users) => {
   divTitle.innerHTML =
     '<h1 class="titleUno">ALUMNAS</h1>';
 };
+
 
 // función para escribir los datos de progreso (tablas)
 window.writeProgress = (progress, name) => {
