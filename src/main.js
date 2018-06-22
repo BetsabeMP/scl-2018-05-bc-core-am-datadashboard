@@ -34,13 +34,11 @@ const getUnits = (units) => {
   let totUnitSummationDurationQuiz = 0;
   for (let unit of unitsKey) {
     const partObj = units[unit].parts;
-    const percentObj = units[unit].percent;
 
     // partKey obtengo subindice de unidades (0,1,2,...)
     const partKey = Object.keys(units[unit].parts);
 
     // recorro arreglo partObj segun sub indice partKey y obtengo duraciones y type
-    // const partDetail = partKey.map(part => {
 
     let totSummationCompleted = 0;
     let totSummationDuration = 0;
@@ -186,6 +184,8 @@ const userCohort = (user, cohortId) => {
         // ejecuta la funcion infoUser dandole datauserCohort.user necesarios para trabajar con el progreso de la alumna
         const infoUser = getInfoUser(datauserCohort[user]);
         console.info('salida', infoUser);
+
+        window.writeProgress(infoUser);
       });
   });
 };
