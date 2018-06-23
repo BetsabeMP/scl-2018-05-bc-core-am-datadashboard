@@ -306,7 +306,7 @@ th {
     max-width: 31%;
   }
   .square {
-    padding-bottom: 135%;
+    padding-bottom: 220%;
   }
   .pais {
     height: 7rem;
@@ -337,7 +337,7 @@ th {
     width: 7rem;
   }
   .catLoading {
-    margin-left: 6rem;
+    margin-left: -2rem;
   }
 }
 
