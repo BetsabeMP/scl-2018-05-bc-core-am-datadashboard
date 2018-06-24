@@ -45,11 +45,39 @@ disponible, fácil de leer y de usar.
 con información clara y relevante de los datos que quiera obtener, también la mayor parte se basó
 en el diseño actual del LMS con los colores que distinguen a Laboratoria,
 ya que según los resultados de la entrevista, el diseño sería más familiar y agradable a la vista de las TMs.
-Después concluimos el diseño creando un sketch de la solución (usando lápiz y papel), luego
+
+Se construyo el diseño creando un sketch de la solución (usando lápiz y papel), luego
 creamos el diseño de la interfaz de usuario que representaría el ideal de la solución y continuamos
 con la implementación hasta el final.
 
-![captura pantalla tabla](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/img/capturaTabla.PNG)
+Observando la siguiente evolución desde el inicio del proyecto hasta el resultado final.
+
+##### Prototipo
+
+![Prototipo](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/src/img/prototipo.png)
+
+##### Interfaz de usuario
+
+![captura pantalla interfaz](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/master/src/img/capturaTabla.png)
+
+## Datos
+
+El objetivo del producto es obtener los datos de completitud de cada alumna, los que se pueden ver en la siguiente tabla:
+
+![captura pantalla tabla](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/src/img/tablaFinal.png)
+
+Donde se puede ver en la parte superior el nombre de la alumna, seguido de el porcentaje de completitud total del bootcamp.
+
+Ademas se muestra una tabla con la información dividida por las unidades del curso, en las que cada una muestra el avance total por unidad y por el tipo de trabajo.
+
+Se detallan tipo Read, Practice y Quiz siendo cada ítem lo siguiente:
+
+Completado: trabajo realizado por la alumna.
+
+Duración: extensión completa del trabajo.
+
+Porcentaje: porción ejecutada por la alumna.
+
 
 ## Guía de instalación
 
