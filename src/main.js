@@ -213,6 +213,8 @@ const userInput = (dataUsers) => {
     let inpt = document.getElementById('inputName').value;
     let inptUpper = inpt.toUpperCase();
 
+    let alertErr = false;
+
     for (let index of dataKey) {
       let name = dataUsers[index].name;
       let nameUpper = name.toUpperCase();
@@ -221,9 +223,14 @@ const userInput = (dataUsers) => {
       if (inptUpper === nameUpper || inpt === nameId) {
         let user = dataUsers[index];
         userCohortInput(user.id, user.signupCohort, user.name);
+        alertErr = true;
       };
       window.writeLoading();
     };
+
+    if (alertErr === false) {
+      window.writeAlert();
+    }
   });
 };
 
