@@ -58,7 +58,7 @@ Observando la siguiente evolución desde el inicio del proyecto hasta el resulta
 
 ##### Interfaz de usuario
 
-![captura pantalla interfaz](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/master/src/img/capturaTabla.png)
+![captura pantalla interfaz](https://github.com/NatalyVerdugoNogue/scl-2018-05-bc-core-am-datadashboard/raw/master/src/img/capturaTabla.png)
 
 ## Datos
 
